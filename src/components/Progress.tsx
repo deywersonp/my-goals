@@ -14,11 +14,13 @@ export function Progress({ percentage }: Props) {
         className="h-7 items-end justify-center rounded-full bg-green-500"
         style={{ width: `${width}%` }}
       >
+        {/* Se a porcentagem for >= 60 o texto fica dentro da barra de progresso */}
         {percentage >= 60 && (
           <Text className="text-black text-xs font-semiBold mx-5">{value}</Text>
         )}
       </View>
 
+      {/* Se a porcentagem for < 60 o texto fica fora da barra de progresso */}
       {percentage < 60 && (
         <Text className="text-white text-xs font-semiBold mx-5">{value}</Text>
       )}

@@ -103,6 +103,7 @@ export default function Home() {
       <BottomSheet
         ref={bottomSheetRef}
         title="Nova meta"
+        //Valor inicial não pode ser 0, por isso utilizamos 0.01
         snapPoints={[0.01, 284]}
         onClose={handleBottomSheetClose}
       >
